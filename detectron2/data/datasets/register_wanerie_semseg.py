@@ -29,7 +29,7 @@ def get_wanerie_dicts(img_dir, split_filename):
         dataset_dicts.append(record)
     return dataset_dicts
 
-DatasetCatalog.register("wanerie_test", lambda d=d: get_wanerie_dicts("/home/hdabare/GANav-offroad/data/wanerie/", "test.txt"))
+DatasetCatalog.register("wanerie_test", lambda: get_wanerie_dicts("/home/hdabare/GANav-offroad/data/wanerie/", "test.txt"))
 MetadataCatalog.get("wanerie_test").set(stuff_classes=[  "BACKGROUND", 
         "GRASS_TREE", 
         "POLE", 
